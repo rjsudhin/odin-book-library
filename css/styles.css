@@ -61,4 +61,58 @@ header {
 }
 
 
+/* main */
+main {
+  width: 100%;
+  max-width: 650px;
+  margin: 1rem auto;
+  /* padding: 1rem; */
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    div {
+      flex: 1 1 120px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    div input[type='text'],
+    div input[type='number'] {
+      min-height: 40px;
+      padding-left: .8rem;
+    }
+
+    div.question-row {
+      margin-top: .2rem;
+      flex:  1 2 200px;
+      max-height: 50px;
+      text-align: left;
+      .inner-row {
+        margin-top: .5rem;
+        display: flex;
+        display: inline;
+        label {
+          margin: 0 1rem;
+        }
+      }
+    }
+
+    div.submit-row {
+      flex: 1 2 80px;
+      display: flex;
+      button {
+        width: 100%;
+        min-height: 50px;
+        align-self: flex-end;
+        margin-top: 1rem;
+      }
+    }
+    
+  }/* main */
+
+}
+/* main */
+
 

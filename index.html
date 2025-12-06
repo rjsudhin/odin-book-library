@@ -22,6 +22,42 @@
 
   <main>
     <!--books card showing here-->
+    <form action="#" method="get">
+      <div class="row">
+        <label for="title">Title Of the Book</label>
+        <input type="text" id="title">
+      </div>
+
+      <div class="row">
+        <label for="author">Author</label>
+        <input type="text" id="author">
+      </div>
+      
+      <div class="row">
+        <label for="pages">Pages</label>
+        <input type="number" id="pages">
+      </div>
+
+
+      <div class="row question-row">
+        <p>Are you finished to read?</p>
+        <div class="inner-row">
+          <label for="y">
+            <input type="radio" id="y" name="read-report" value="yes">
+            YES
+          </label>
+  
+          <label for="n">
+            <input type="radio" id="n" name="read-report" value="no">
+            NO
+          </label>
+        </div>
+      </div>
+
+      <div class="row submit-row">
+        <button class="submit-btn">Submit</button>
+      </div>
+    </form>
   </main>
 
   <script src="js/book.js"></script>
