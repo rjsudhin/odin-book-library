@@ -1,0 +1,23 @@
+/* Stack Sans Headline font-family */
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: 'Stack Sans Headline';
+  font-size: 1rem;
+}
+
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+
+
