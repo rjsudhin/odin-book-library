@@ -65,7 +65,7 @@ function creatingBook() {
   
   title.value = ''
   author.value = ''
-  pagesInput.value = ''
+  pages.value = ''
 }
 
 
