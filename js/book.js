@@ -18,15 +18,21 @@ addButton.addEventListener('click', addingUI)
 submitButton.addEventListener('click', (e) => {
   e.preventDefault() // disable submisson
   creatingBook()
+  togglingForm()
+  togglingAddButton()
+  servingLibrary()
 })
 
 // Books constructor
-function Book(title, author, pages, read, id) {
+function Book(title, author, pages, id) {
   this.title = title
   this.author = author
   this.pages = pages
-  this.read = read
   this.id = id
+}
+
+Book.prototype.showing = function() {
+  console.log('delete button clicks')
 }
 
 function addingUI() {
@@ -48,7 +54,32 @@ function creatingBook() {
 
 // serving all library 
 function servingLibrary() {
-  
+  const card = document.createElement('div')
+  for (const book of myLibrary) {
+    // title
+    const cardTitle = document.createElement('h2')
+    cardTitle.textContent = book.title
+
+    // card author
+    const cardAuthor = document.createElement('p')
+    cardAuthor.textContent = book.author
+
+    // card pages
+    const cardPages = document.createElement('p')
+    cardPages.textContent = book.pages
+      
+    card.dataset.uniqueId = book.id
+    deleteButton = document.createElement('button')
+    deleteButton.textContent = 'Delete'
+    deleteButton.addEventListener('click', (e) => {
+      console.log('delete Button clicked')
+    })
+
+    card.append(cardTitle, cardAuthor, cardPages, deleteButton)
+    
+    console.log(card)
+    document.body.appendChild(card)
+  }
 }
 
 
