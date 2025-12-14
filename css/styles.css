@@ -1,0 +1,55 @@
+/* Inter font family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* header section */
+  .header {
+    border: 1px solid black;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 1px #252525;
+    gap: 1rem;
+    .add-button {
+      height: 50px;
+      width: 100px;
+      font-size: 1rem;
+      font-family: inherit;
+      color: #fff;
+      background-color: rgba(41, 65, 73, 0.233);
+      backdrop-filter: blur(10px);
+      border-radius: .3rem;
+      border: none;
+      box-shadow: 1px 1px 1px 1px #2525256c;
+    }
+
+  }  
+  /* header section */
+
+}
+
