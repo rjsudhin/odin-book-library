@@ -13,112 +13,176 @@ html {
   font-family: Inter, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../wp12638285-manga-comics-wallpapers.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+  position: relateive;
+  overflow: scroll;
 
-  /* header section */
-  .header {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 650px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 1rem;
+}
+
+/* header section */
+.header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px 1px #252525;
+  gap: 1rem;
+  .add-button {
+    height: 50px;
+    width: 100px;
     font-size: 1rem;
-    text-transform: uppercase;
+    font-family: inherit;
     color: #fff;
-    text-shadow: 1px 1px 1px #252525;
-    gap: 1rem;
-    .add-button {
-      height: 50px;
-      width: 100px;
-      font-size: 1rem;
-      font-family: inherit;
-      color: #fff;
-      background-color: rgba(41, 65, 73, 0.233);
-      backdrop-filter: blur(10px);
-      border-radius: .3rem;
-      border: none;
-      box-shadow: 1px 1px 1px 1px #2525256c;
-    }
-
-  }  
-  /* header section */
-
-  form {
-    background-color: rgba(41, 65, 73, 0.247);
+    background-color: rgba(41, 65, 73, 0.233);
     backdrop-filter: blur(10px);
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 550px;
-    padding: 1.5rem;
-    border-radius: .7rem;
-    box-shadow: 1px 1px 1px 1px #25252571;
-    .row {
-      display: flex;
-      flex: 1 1 100px;
-      align-items: center;
-      justify-content: center;
-      margin: 1rem 0;
-
-      label {
-        display: block;
-        text-align: right;
-        padding-right: 1.5rem;
-        width: 180px;
-        color: #fff;
-        font-size: 1rem;
-        text-transform: uppercase;
-        margin-bottom: .8rem;
-      }
-      input {
-        width: 280px;
-        height: 40px;
-        padding: .7rem;
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid rgba(41, 65, 73, 0.89);
-        outline: none;
-        font-size: 1rem;
-        color: #fff;
-      }
-
-      button {
-        margin-left: 180px;
-        align-self: flex-start;
-        width: 280px;
-        height: 40px;
-        margin-top: .2rem;
-      }
-    }
+    border-radius: .3rem;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #2525256c;
   }
 
-  @media screen and (max-width: 650px) {
-    form {
-      .row {
-        flex: 1 1 150px;
-        flex-direction: column;
+}  
+/* header section */
+
+form {
+  background-color: rgba(41, 65, 73, 0.247);
+  backdrop-filter: blur(10px);
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 550px;
+  padding: 1.5rem;
+  border-radius: .7rem;
+  box-shadow: 1px 1px 1px 1px #25252571;
+
+  .row {
+    display: flex;
+    flex: 1 1 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+
+    label {
+      display: block;
+      text-align: right;
+      padding-right: 1.5rem;
+      width: 180px;
+      color: #fff;
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-bottom: .8rem;
+    }
+    input {
+      width: 280px;
+      height: 40px;
+      padding: .7rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid rgba(41, 65, 73, 0.89);
+      outline: none;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    button {
+      margin-left: 180px;
+      align-self: flex-start;
+      width: 280px;
+      height: 40px;
+      margin-top: .2rem;
+    }
+  }
+}
+
+
+#books-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  gap: 1rem;
+  
+  .card {
+    background-color: rgba(41, 65, 73, 0.308);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    flex: 1 1 180px;
+    margin: 1rem;
+    
+    .card-title {
+      background-color: rgba(41, 65, 73, 0.233);
+      text-transform: capitalize;
+      color: #fff;
+      text-shadow: 1px 1px 1px #252525;
+      text-align: center;
+      font-size: 1.8rem;
+      box-shadow: 1px 1px 1px #252525;
+      border-radius: .8rem;
+    }
+    
+    .card-author {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .card-page{
+      font-weight: bold;
+      font-size: 1rem;
+      opacity: 0.6;
+    }
+
+    .delete-button {
+      height: 40px;
+      align-self: flex-end;
+      background-color: rgba(41, 65, 73, 0.308);
+      color: #ffff;
+      border: none;
+      padding: 0 1.5rem;
+      border-radius: .8rem;
+      box-shadow: 1px 1px 1px #252525;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  form {
+    .row {
+      flex: 1 1 150px;
+      flex-direction: column;
+      width: 100%;
+      label {
+        display: inline;
+        text-align: left;
         width: 100%;
-        label {
-          display: inline;
-          text-align: left;
-          width: 100%;
-        }
-        input {
-          width: 100%;
-        }
-        button {
-          width: 100%;
-          margin: 0;
-          margin-top: 1rem;
-        }
+      }
+      input {
+        width: 100%;
+      }
+      button {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
       }
     }
   }

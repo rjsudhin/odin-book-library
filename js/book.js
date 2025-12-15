@@ -88,18 +88,22 @@ function servingLibrary() {
   for (const book of myLibrary) {
     // title
     const cardTitle = document.createElement('h2')
+    cardTitle.classList.add('card-title')
     cardTitle.textContent = book.title
 
     // card author
     const cardAuthor = document.createElement('p')
-    cardAuthor.textContent = book.author
+    cardAuthor.classList.add('card-author')
+    cardAuthor.textContent = 'Author : ' + book.author
 
     // card pages
     const cardPages = document.createElement('p')
-    cardPages.textContent = book.pages
+    cardPages.classList.add('card-page')
+    cardPages.textContent = 'Pages : ' + book.pages
       
     card.dataset.uniqueId = book.id
     deleteButton = document.createElement('button')
+    deleteButton.classList.add('delete-button')
     deleteButton.textContent = 'Delete'
 
     deleteButton.addEventListener('click', (e) => {
@@ -122,7 +126,7 @@ function togglingForm() {
   if (document.body.contains(form)) {
     document.body.removeChild(form)
   } else {
-    document.body.appendChild(form)
+    document.body.insertBefore(form, booksContainer)
   }
 }
 
