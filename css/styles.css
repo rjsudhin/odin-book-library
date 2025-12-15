@@ -112,7 +112,7 @@ form {
 
 #books-container {
   width: 100%;
-  max-width: 650px;
+  max-width: 550px;
   margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
@@ -127,12 +127,12 @@ form {
     padding: 1.5rem;
     flex: 1 1 180px;
     margin: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #252525;
     
     .card-title {
       background-color: rgba(41, 65, 73, 0.233);
       text-transform: capitalize;
-      color: #fff;
-      text-shadow: 1px 1px 1px #252525;
       text-align: center;
       font-size: 1.8rem;
       box-shadow: 1px 1px 1px #252525;
