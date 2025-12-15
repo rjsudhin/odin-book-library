@@ -60,8 +60,17 @@ function creatingBook() {
   let titleInput = title.value 
   let authorInput = author.value 
   let pagesInput = pages.value
-  let bookObj = new Book(titleInput, authorInput, pagesInput)
-  addBookToLibrary(bookObj)
+
+  // check the fields are empty or not
+  if (
+    (titleInput != '') &&
+    (authorInput != '') &&
+    (pagesInput != '')
+  ) {
+    let bookObj = new Book(titleInput, authorInput, pagesInput)
+    addBookToLibrary(bookObj)
+
+  }
   
   title.value = ''
   author.value = ''
