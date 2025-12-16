@@ -36,6 +36,19 @@ function Book(title, author, pages) {
   this.id = crypto.randomUUID()
 }
 
+// change read Report
+Book.prototype.readReport = function(e) {
+  console.log(e.target.previousElementSibling)
+  if (e.target.checked) {
+    console.log('Fully readed')
+    e.target.previousElementSibling.textContent = 'Fully readed'
+  } else {
+    console.log('Not fully readed')
+    e.target.previousElementSibling.textContent = 'Not fully readed'
+
+  }
+}
+
 // delete books
 Book.prototype.deleteBook = function() {
   let currentBookId = this.id
@@ -48,6 +61,8 @@ Book.prototype.deleteBook = function() {
   }
   
 }
+
+
 
 
 // showing UI in home screen
@@ -100,6 +115,23 @@ function servingLibrary() {
     const cardPages = document.createElement('p')
     cardPages.classList.add('card-page')
     cardPages.textContent = 'Pages : ' + book.pages
+    
+    const innerReadContainer = document.createElement('div')
+
+    const readPara = document.createElement('p')
+    readPara.classList.add('read-para')
+    readPara.textContent = 'Not fully readed'
+
+    const readCheck = document.createElement('input')
+    readCheck.type = 'checkbox'
+
+    // checking chekckbox event
+    readCheck.addEventListener('change', (e) => {
+      book.readReport(e)
+    })
+
+    innerReadContainer.append(readPara, readCheck)
+
       
     card.dataset.uniqueId = book.id
     deleteButton = document.createElement('button')
@@ -111,7 +143,7 @@ function servingLibrary() {
       book.deleteBook()
     })
 
-    card.append(cardTitle, cardAuthor, cardPages, deleteButton)
+    card.append(cardTitle, cardAuthor, cardPages, innerReadContainer, deleteButton)
     booksContainer.appendChild(card)
   }
 }
