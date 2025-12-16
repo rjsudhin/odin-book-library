@@ -1,4 +1,4 @@
-const myLibrary = []
+let myLibrary = []
 
 const form = document.querySelector('form')
 const header = document.querySelector('.header')
@@ -84,7 +84,6 @@ function creatingBook() {
   ) {
     let bookObj = new Book(titleInput, authorInput, pagesInput)
     addBookToLibrary(bookObj)
-
   }
   
   title.value = ''
@@ -93,9 +92,9 @@ function creatingBook() {
 }
 
 
-
 // serving all library 
 function servingLibrary() {
+
   booksContainer.innerHTML = ''
   const card = document.createElement('div')
   card.classList.add('card')
@@ -140,6 +139,7 @@ function servingLibrary() {
     deleteButton.textContent = 'delete'
 
     deleteButton.addEventListener('click', (e) => {
+      console.log('clicked delete button')
       book.deleteBook()
     })
 
