@@ -19,16 +19,12 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 body {
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
-  position: relateive;
-  overflow: scroll;
-
 }
 
 /* header section */
@@ -42,8 +38,8 @@ body {
   padding: 1.5rem 0;
   font-size: 1rem;
   text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 1px 1px 1px #252525;
+  color: #d6bb24;
+  text-shadow: 1px 1px 1px #501010;
   gap: 1rem;
   .add-button {
     height: 50px;
@@ -51,7 +47,7 @@ body {
     font-size: 1rem;
     font-family: inherit;
     color: #fff;
-    background-color: rgba(218, 188, 107, 0.829);
+    background-color: rgba(184, 83, 58, 0.829);
     backdrop-filter: blur(10px);
     border-radius: .3rem;
     border: none;
@@ -100,12 +96,22 @@ form {
       color: #fff;
     }
 
+    /* submit button */
     button {
       margin-left: 180px;
       align-self: flex-start;
       width: 280px;
       height: 40px;
       margin-top: .2rem;
+      background-color: rgb(201, 84, 84);
+      border: none;
+      border-radius: .8rem;
+      color: #ffff;
+      font-size: 1rem;
+      font-family: inherit;
+      text-transform: uppercase;
+      box-shadow: 1px 1px 1px #252525;
+      cursor: pointer;
     }
   }
 }
