@@ -104,7 +104,8 @@ function servingLibrary() {
     card.dataset.uniqueId = book.id
     deleteButton = document.createElement('button')
     deleteButton.classList.add('delete-button')
-    deleteButton.textContent = 'Delete'
+    deleteButton.classList.add('material-symbols-outlined')
+    deleteButton.textContent = 'delete'
 
     deleteButton.addEventListener('click', (e) => {
       book.deleteBook()
